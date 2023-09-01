@@ -1,6 +1,6 @@
 #!/bin/bash
 
-xls_path="${XL_IDP_PATH_MORSERVICE}"
+xls_path="${XL_IDP_PATH_MORSERVICE_PARSED}"
 
 done_path="${xls_path}"/done
 if [ ! -d "$done_path" ]; then
@@ -24,7 +24,7 @@ do
   echo "'${file} - ${mime_type}'"
 
 	# Will convert csv to json
-	python3 ${XL_IDP_ROOT_MORSERVICE}/parsed_file.py "${file}" "${json_path}"
+	python3 ${XL_IDP_PATH_MORSERVICE_PARSED_SCRIPTS}/main.py "${file}" "${json_path}"
 
   if [ $? -eq 0 ]
 	then
