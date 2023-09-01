@@ -1,6 +1,6 @@
 #!/bin/bash
 
-xls_path="${XL_IDP_PATH_MORSERVICE_PARSED}"
+xls_path="${XL_IDP_ROOT_MORSERVICE_PARSED}"
 
 done_path="${xls_path}"/done
 if [ ! -d "$done_path" ]; then
