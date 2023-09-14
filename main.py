@@ -93,3 +93,4 @@ class ImportNW(object):
 
 import_nw: ImportNW = ImportNW(sys.argv[1], sys.argv[2])
 import_nw.main()
+
