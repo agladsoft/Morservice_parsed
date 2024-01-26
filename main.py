@@ -70,6 +70,7 @@ class ImportNW(object):
 
     def change_type_time(self,df):
         df['date'] = df['date'].dt.date.astype(str)
+        df['month_port'] = df['month_port'].dt.date.astype(str)
 
     def main(self) -> None:
         """
