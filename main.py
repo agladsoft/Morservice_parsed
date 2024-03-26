@@ -69,8 +69,10 @@ class ImportNW(object):
 
 
     def change_type_time(self,df):
-        df['date'] = df['date'].dt.date.astype(str)
-        df['month_port'] = df['month_port'].dt.date.astype(str)
+        df['date'] = pd.to_datetime(df['date'])
+        df['month_port'] = pd.to_datetime(df['month_port'])
+        df['date'] = df['date'].dt.strftime('%Y-%m-%d')
+        df['month_port'] = df['month_port'].dt.strftime('%Y-%m-%d')
 
     def main(self) -> None:
         """
